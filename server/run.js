@@ -1,4 +1,5 @@
 var restify = require('restify'),
+
     partial = require('./partial'),
     image = require('./image'),
     style = require('./style'),
@@ -50,58 +51,39 @@ var restify = require('restify'),
     };
 
 
+function serveData(req, res, idx, mimeType, isText) {
+    var path = req.params.path,
+        result = idx[path],
+        header = {
+            'Content-Type': mimeType
+        },
+        binary;
 
+    if (isText) {
+        header['Content-Length'] =  Buffer.byteLength(result);
+    } else {
+        binary = 'binary';
+    }
+
+    res.writeHead(200, header);
+    res.end(result, binary);
+
+}
 
 function ciPartial(req, res, next) {
-    var partial = req.params.path,
-        resultHTML = partialIndex[partial];
-
-    res.writeHead(200, {
-        'Content-Length': Buffer.byteLength(resultHTML),
-        'Content-Type': 'text/html'
-    });
-    res.write(resultHTML);
-    res.end();
+    serveData(req, res, partialIndex, 'text/html', true);
 }
 
 function ciStyle(req, res, next) {
-    console.log(req.params.path);
-
-    var style = req.params.path,
-        resultCSS = styleIndex[style];
-
-    res.writeHead(200, {
-        'Content-Length': Buffer.byteLength(resultCSS),
-        'Content-Type': 'text/css'
-    });
-    res.write(resultCSS);
-    res.end();
+    serveData(req, res, styleIndex, 'text/css', true);
 }
 
 function ciImage(req, res, next) {
-    console.log(req.params.path)
-    var image = req.params.path,
-        resultPNG = imageIndex[image];
-
-    //console.log(Buffer.byteLength(resultPNG));
-    res.writeHead(200, {
-        //'Content-Length': Buffer.byteLength(resultPNG),
-        'Content-Type': 'image/png'
-    });
-    //res.write(resultPNG);
-    res.end(resultPNG, 'binary');
+    serveData(req, res, imageIndex, 'image/png');
 }
 
-
 function ciFont(req, res, next) {
-    console.log(req.params.path)
-    var font = req.params.path,
-        resultFont = fontIndex[font];
-
-    res.writeHead(200, {
-        'Content-Type': "application/x-font-opentype"
-    });
-    res.end(resultFont, 'binary');
+    serveData(req, res, fontIndex, 'application/x-font-opentype');
 }
 
 
