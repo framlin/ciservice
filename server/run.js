@@ -2,12 +2,18 @@ var restify = require('restify'),
     partial = require('./partial'),
     image = require('./image'),
     style = require('./style'),
+
     framlinCSS = style.load('framlin'),
+    framlinLayoutCSS = style.load('fr-layout'),
+    framlinLookCSS = style.load('fr-look'),
     normalizeCSS = style.load('normalize'),
+
     topHTML = partial.load('top'),
     impressumHTML = partial.load('impressum'),
     bottomHTML = partial.load('bottom'),
+
     logo = image.load('framlin-logo-g+.jpg'),
+
     partialIndex = {
         'top' : topHTML,
         'impressum': impressumHTML,
@@ -18,6 +24,8 @@ var restify = require('restify'),
     },
     styleIndex = {
         'framlin': framlinCSS,
+        'fr-look': framlinLookCSS,
+        'fr-layout': framlinLayoutCSS,
         'normalize': normalizeCSS
     };
 
@@ -37,7 +45,8 @@ function ciPartial(req, res, next) {
 }
 
 function ciStyle(req, res, next) {
-    console.log(req.params.path)
+    console.log(req.params.path);
+
     var style = req.params.path,
         resultCSS = styleIndex[style];
 
