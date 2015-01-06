@@ -2,6 +2,7 @@ var restify = require('restify'),
     partial = require('./partial'),
     image = require('./image'),
     style = require('./style'),
+    font = require('./font'),
 
     framlinCSS = style.load('framlin'),
     framlinLayoutCSS = style.load('fr-layout'),
@@ -15,6 +16,14 @@ var restify = require('restify'),
     logo = image.load('framlin-logo'),
     bullet = image.load('bullet'),
 
+    TeXMono = font.load('texgyrecursor-regular'),
+    TeXMono_Bold = font.load('texgyrecursor-bold'),
+    TeX = font.load('texgyreschola-regular'),
+    TeX_Bold = font.load('texgyreschola-bold'),
+    TeXSans = font.load('texgyreadventor-regular'),
+    TeXSans_Bold = font.load('texgyreadventor-bold'),
+    telegrame = font.load('telegrama_render_osn'),
+
     partialIndex = {
         'top' : topHTML,
         'impressum': impressumHTML,
@@ -23,6 +32,15 @@ var restify = require('restify'),
     imageIndex = {
         'logo' : logo,
         'bullet': bullet
+    },
+    fontIndex = {
+        'TeXMono' : TeXMono,
+        'TeXMono_Bold': TeXMono_Bold,
+        'TeX': TeX,
+        'TeX_Bold': TeX_Bold,
+        'TeXSans': TeXSans,
+        'TeXSans_Bold': TeXSans_Bold,
+        'telegrame': telegrame
     },
     styleIndex = {
         'framlin': framlinCSS,
@@ -76,17 +94,14 @@ function ciImage(req, res, next) {
 
 
 function ciFont(req, res, next) {
-    console.log(req.params.path);
-
-    var style = req.params.path,
-        resultCSS = styleIndex[style];
+    console.log(req.params.path)
+    var font = req.params.path,
+        resultFont = fontIndex[font];
 
     res.writeHead(200, {
-        'Content-Length': Buffer.byteLength(resultCSS),
-        'Content-Type': 'text/css'
+        'Content-Type': "application/x-font-opentype"
     });
-    res.write(resultCSS);
-    res.end();
+    res.end(resultFont, 'binary');
 }
 
 
@@ -101,5 +116,5 @@ server.get('/ci/image/:path', ciImage);
 server.get('/ci/font/:path', ciFont);
 
 server.listen(8088, function() {
-    //console.log('%s listening at %s', server.name, server.url);
+    console.log('%s listening at %s', server.name, server.url);
 });

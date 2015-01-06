@@ -1,47 +1,47 @@
 @font-face {
     font-family: TeX;
-    src: url('/fonts/texgyreschola-regular.otf');
+    src: url('/ci/font/TeX');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: TeX_Bold;
-    src: url('/fonts/texgyreschola-bold.otf');
+    src: url('/ci/font/TeX_Bold');
     font-style: normal;
     font-weight: bold;
 }
 @font-face {
     font-family: TeXMono;
-    src: url('/fonts/texgyrecursor-regular.otf');
+    src: url('/ci/font/TeXMono');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: TeXMono_Bold;
-    src: url('/fonts/texgyrecursor-bold.otf');
+    src: url('/ci/font/TeXMono_Bold');
     font-style: normal;
     font-weight: bold;
 }
 
 @font-face {
     font-family: TeXSans;
-    src: url('/fonts/texgyreadventor-regular.otf');
+    src: url('/ci/font/TeXSans');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: TeXSans_Bold;
-    src: url('/fonts/texgyreadventor-bold.otf');
+    src: url('/ci/font/TeXSans_Bold');
     font-style: normal;
     font-weight: bold;
 }
 
 @font-face {
     font-family: telegrame;
-    src: url('/fonts/telegrama_render_osn.otf');
+    src: url('/ci/font/telegrame');
     font-style: normal;
     font-weight: normal;
 }
