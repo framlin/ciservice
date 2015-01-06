@@ -270,7 +270,7 @@ div.customers{
 }
 
 .cv-kind ul, .cv-entry ul{
-    list-style-image: url("../images/bullet.gif");
+    list-style-image: url("/ci/image/bullet");
 }
 /* LEAGACY */
 div#links{
@@ -285,5 +285,5 @@ div#properties{
     background-color: white;
 }
 div#lists ul{
-    list-style-image: url("../images/bullet.gif");
+    list-style-image: url("/ci/image/bullet");
 }

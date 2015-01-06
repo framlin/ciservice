@@ -12,7 +12,8 @@ var restify = require('restify'),
     impressumHTML = partial.load('impressum'),
     bottomHTML = partial.load('bottom'),
 
-    logo = image.load('framlin-logo-g+.jpg'),
+    logo = image.load('framlin-logo'),
+    bullet = image.load('bullet'),
 
     partialIndex = {
         'top' : topHTML,
@@ -20,7 +21,8 @@ var restify = require('restify'),
         'bottom' : bottomHTML
     },
     imageIndex = {
-        'logo' : logo
+        'logo' : logo,
+        'bullet': bullet
     },
     styleIndex = {
         'framlin': framlinCSS,
@@ -72,12 +74,31 @@ function ciImage(req, res, next) {
     res.end(resultPNG, 'binary');
 }
 
+
+function ciFont(req, res, next) {
+    console.log(req.params.path);
+
+    var style = req.params.path,
+        resultCSS = styleIndex[style];
+
+    res.writeHead(200, {
+        'Content-Length': Buffer.byteLength(resultCSS),
+        'Content-Type': 'text/css'
+    });
+    res.write(resultCSS);
+    res.end();
+}
+
+
+
+
 var server = restify.createServer();
 server.use(restify.CORS( {credentials: true, headers: ['x-framlin-cv']}));
 server.use(restify.fullResponse());
 server.get('/ci/partial/:path', ciPartial);
 server.get('/ci/style/:path', ciStyle);
 server.get('/ci/image/:path', ciImage);
+server.get('/ci/font/:path', ciFont);
 
 server.listen(8088, function() {
     //console.log('%s listening at %s', server.name, server.url);
