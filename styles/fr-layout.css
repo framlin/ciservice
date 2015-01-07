@@ -21,8 +21,9 @@ section header{
 
 section header h1{
     padding-bottom: 5px;
-    margin: 0 0 5px 0;
+    margin: 0.1em;
 }
+
 
 section .msg {
     float:left;
@@ -45,13 +46,13 @@ section footer {
 
 /* ============== CUSTOM ======================== */
 /* ------  header -------- */
+header {
+    padding: 5px 10px 5px 10px;
+}
+
 #logo {
     float:left;
     margin: 0;
-}
-
-header {
-    padding: 5px 10px 5px 10px;
 }
 
 #heading{
@@ -76,13 +77,14 @@ header {
     margin-top: 1em;
 }
 
-/* ------  navigation -------- */
 #main{
     margin: 0 auto;
     max-width: 33em;
     padding: 0;
 }
 
+
+/* ------  navigation -------- */
 #navigation{
     margin-top: 5px;
     width: 100%;
@@ -162,10 +164,6 @@ header {
     margin-left: 65%;
 }
 /* =============== CONTENT ===========================*/
-section header h1{
-    margin: 0.1em;
-}
-
 
 #breadcrumb ul{
     padding: 0px 0px 5px 5px;

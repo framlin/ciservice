@@ -1,5 +1,5 @@
 var restify = require('restify'),
-
+    ServerPort = require('fr-infra').ServerConfig.ciservice.port,
     partial = require('./partial'),
     image = require('./image'),
     style = require('./style'),
@@ -12,6 +12,8 @@ var restify = require('restify'),
 
     topHTML = partial.load('top'),
     impressumHTML = partial.load('impressum'),
+    showcasesHTML = partial.load('showcases'),
+    disclaimerHTML = partial.load('disclaimer'),
     bottomHTML = partial.load('bottom'),
 
     logo = image.load('framlin-logo'),
@@ -28,6 +30,8 @@ var restify = require('restify'),
     partialIndex = {
         'top' : topHTML,
         'impressum': impressumHTML,
+        'showcases': showcasesHTML,
+        'disclaimer': disclaimerHTML,
         'bottom' : bottomHTML
     },
     imageIndex = {
@@ -59,6 +63,7 @@ function serveData(req, res, idx, mimeType, isText) {
         },
         binary;
 
+    console.log(path);
     if (isText) {
         header['Content-Length'] =  Buffer.byteLength(result);
     } else {
@@ -88,15 +93,17 @@ function ciFont(req, res, next) {
 
 
 
-
+// ----------- run ----------------------------
 var server = restify.createServer();
+
 server.use(restify.CORS( {credentials: true, headers: ['x-framlin-cv']}));
 server.use(restify.fullResponse());
+
 server.get('/ci/partial/:path', ciPartial);
 server.get('/ci/style/:path', ciStyle);
 server.get('/ci/image/:path', ciImage);
 server.get('/ci/font/:path', ciFont);
 
-server.listen(8088, function() {
+server.listen(ServerPort, function() {
     console.log('%s listening at %s', server.name, server.url);
 });
