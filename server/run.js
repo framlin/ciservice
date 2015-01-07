@@ -10,11 +10,9 @@ var restify = require('restify'),
     framlinLookCSS = style.load('fr-look'),
     normalizeCSS = style.load('normalize'),
 
-    topHTML = partial.load('top'),
-    impressumHTML = partial.load('impressum'),
-    showcasesHTML = partial.load('showcases'),
-    disclaimerHTML = partial.load('disclaimer'),
-    bottomHTML = partial.load('bottom'),
+    runjsCSS = style.load('runjs'),
+    runjsLookCSS = style.load('runjs-look'),
+    runjsLayoutCSS = style.load('runjs-layout'),
 
     logo = image.load('framlin-logo'),
     bullet = image.load('bullet'),
@@ -27,11 +25,27 @@ var restify = require('restify'),
     TeXSans_Bold = font.load('texgyreadventor-bold'),
     telegrame = font.load('telegrama_render_osn'),
 
+    topHTML = partial.load('top'),
+    headingHTML = partial.load('heading'),
+    topnavHTML = partial.load('topnav'),
+    maintopHTML = partial.load('maintop'),
+    impressumHTML = partial.load('impressum'),
+    bottomnavHTML = partial.load('bottomnav'),
+    disclaimerHTML = partial.load('disclaimer'),
+    metanavHTML = partial.load('metanav'),
+    bottomHTML = partial.load('bottom'),
+    mainbottomHTML = partial.load('mainbottom'),
+
     partialIndex = {
         'top' : topHTML,
+        'heading' : headingHTML,
+        'topnav' : topnavHTML,
+        'maintop' : maintopHTML,
         'impressum': impressumHTML,
-        'showcases': showcasesHTML,
+        'bottomnav': bottomnavHTML,
         'disclaimer': disclaimerHTML,
+        'metanav': metanavHTML,
+        'mainbottom': mainbottomHTML,
         'bottom' : bottomHTML
     },
     imageIndex = {
@@ -48,6 +62,9 @@ var restify = require('restify'),
         'telegrame': telegrame
     },
     styleIndex = {
+        'runjs': runjsCSS,
+        'runjs-look': runjsLookCSS,
+        'runjs-layout': runjsLayoutCSS,
         'framlin': framlinCSS,
         'fr-look': framlinLookCSS,
         'fr-layout': framlinLayoutCSS,
@@ -57,13 +74,13 @@ var restify = require('restify'),
 
 function serveData(req, res, idx, mimeType, isText) {
     var path = req.params.path,
+        site = req.params.site,
         result = idx[path],
         header = {
             'Content-Type': mimeType
         },
         binary;
 
-    console.log(path);
     if (isText) {
         header['Content-Length'] =  Buffer.byteLength(result);
     } else {
@@ -99,9 +116,9 @@ var server = restify.createServer();
 server.use(restify.CORS( {credentials: true, headers: ['x-framlin-cv']}));
 server.use(restify.fullResponse());
 
-server.get('/ci/partial/:path', ciPartial);
-server.get('/ci/style/:path', ciStyle);
-server.get('/ci/image/:path', ciImage);
+server.get('/ci/:site/partial/:path', ciPartial);
+server.get('/ci/:site/style/:path', ciStyle);
+server.get('/ci/:site/image/:path', ciImage);
 server.get('/ci/font/:path', ciFont);
 
 server.listen(ServerPort, function() {
