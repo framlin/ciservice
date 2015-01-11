@@ -19,21 +19,28 @@ function loadAll() {
         postfixPos,
         site,
         style,
-        result = {};
+        result = {},
+        postfix;
 
     for (i = 0; i < styleFileNames.length; i += 1) {
+
         path = styleFileNames[i];
         dirs = path.split('/');
         site = dirs[dirs.length - 2];
         fileName = dirs[dirs.length - 1];
         postfixPos = fileName.lastIndexOf('.');
+        postfix = fileName.substring(postfixPos);
         style = fileName.substring(0, postfixPos);
-        if (!result[site]) {
-            result[site] = {};
+
+        if (postfix === STYLES_POSTFIX) {
+            if (!result[site]) {
+                result[site] = {};
+            }
+            result[site][style] = fs.readFileSync(path, {encoding: 'utf-8'});
         }
-        result[site][style] = fs.readFileSync(path, {encoding: 'utf-8'});
 
     }
+
     return result;
 }
 

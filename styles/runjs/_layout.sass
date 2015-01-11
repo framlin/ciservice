@@ -1,0 +1,29 @@
+@import "../all/layout"
+
+/*$main-max-width: 33.2em*/
+
+/* HEADING */
+$header-hight: 2em
+$firma-hight: 0.6em
+$product-hight: 0.6em
+$firma-margin-top: $header-hight - $firma-hight
+$product-margin-top: $header-hight - ($firma-hight + 2 * $product-hight)
+
+
+
+
+#product
+  margin-top: $product-margin-top
+
+#firma
+  margin-top: $firma-margin-top
+
+#navigation
+  visibility: collapse
+  margin: 0
+
+#main
+  max-width: 33.2em /* -> all */
+
+article > header
+  margin-bottom: $section-margin-bottem

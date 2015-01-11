@@ -1,0 +1,28 @@
+@import "../all/look"
+
+/*$ci-background : #fff60a*/
+$text-color: lighten($ci-background, 35)
+$hi-text-color: lighten($ci-background, 40)
+
+html
+  background-color: $ci-background
+
+
+.content
+  article
+    section
+      background-color: $text-color
+
+article
+  header
+    background-color: $hi-text-color
+
+section
+  header
+    background-color: $hi-text-color
+
+    h1
+      background-color: $hi-text-color
+
+section.no-boddy
+  border-bottom: 0
