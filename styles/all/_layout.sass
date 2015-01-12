@@ -1,9 +1,12 @@
-
-
 $main-max-width: 33.2em
 $heading-width: $main-max-width - 1.3
 $section-margin-bottem: 1em
 $section-padding: 5px
+$section-margin: 0.25em 0px
+
+$footer-left_width: 75%
+$footer-right-width: 100 - $footer-left_width
+
 html
   overflow: scroll
 
@@ -61,6 +64,8 @@ body
 .content > article > header
   text-align: center
   padding: $section-padding
+  p, h1, h2
+    margin: $section-margin
 
 
 section
@@ -69,22 +74,24 @@ section
   header, p, footer
     padding: $section-padding
 
-    h1
-      margin: 0
+  p, h1, h2
+    margin: $section-margin
+
 
   footer
     .msg
       float: left
-      width:  75%
+      width:  $footer-left_width
 
     nav
-      width: 25%
-      margin-left: 75%
+      width: $footer-right-width
+      margin-left: $footer-left_width
 
     a
       width: 100%
 
-
+  audio
+    width: 100%
 /*================ customer-nav ==================================*/
 #bottomnav
   width: 100%
@@ -107,6 +114,3 @@ section
 #metanav li
   display: inline
   margin-left: 1em
-
-.cv-kind ul, .cv-entry ul
-  padding-left: 20px

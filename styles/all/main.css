@@ -48,13 +48,15 @@ body {
 .content > article > header {
   text-align: center;
   padding: 5px; }
+  .content > article > header p, .content > article > header h1, .content > article > header h2 {
+    margin: 0.25em 0px; }
 
 section {
   margin-bottom: 1em; }
   section header, section p, section footer {
     padding: 5px; }
-    section header h1, section p h1, section footer h1 {
-      margin: 0; }
+  section p, section h1, section h2 {
+    margin: 0.25em 0px; }
   section footer .msg {
     float: left;
     width: 75%; }
@@ -62,6 +64,8 @@ section {
     width: 25%;
     margin-left: 75%; }
   section footer a {
+    width: 100%; }
+  section audio {
     width: 100%; }
 
 /*================ customer-nav ================================== */
@@ -84,9 +88,6 @@ section {
 #metanav li {
   display: inline;
   margin-left: 1em; }
-
-.cv-kind ul, .cv-entry ul {
-  padding-left: 20px; }
 
 @font-face {
   font-family: TeX;
@@ -164,10 +165,10 @@ ul {
 
 /*============ CONTENT ================== */
 #breadcrumb {
-  background-color: #ffee37; }
+  background-color: #ffffde;
+  font-size: small; }
 
 #breadcrumb a, #breadcrumb a:visited {
-  background-color: #ffee37;
   color: #521700;
   font-size: small; }
 
@@ -204,6 +205,9 @@ section {
     font-family: TeXMono; }
     section footer nav {
       text-align: right; }
+  section h2 {
+    padding: 5px;
+    font-size: 1.2em; }
 
 section header a, section header a:visited {
   color: #521700; }
