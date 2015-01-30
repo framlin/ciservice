@@ -1,6 +1,22 @@
 @import "../all/layout"
 
-/*$main-max-width: 33.2em*/
+//$main-max-width: 33.2em
+//$heading-width: $main-max-width - 1.3
+
+$main-max-width: 40em
+$heading-width: $main-max-width - 1.3
+
+$relFull: 48em
+$left-column-width: percentage(18em/$relFull)
+$right-column-width: percentage(29.5em/$relFull)
+
+$right-collumn-margin: $left-column-width
+
+#main
+  margin: 0 auto
+  max-width: $main-max-width
+  padding: 0
+
 
 /* HEADING */
 $header-hight: 2em
@@ -10,6 +26,10 @@ $firma-margin-top: $header-hight - $firma-hight
 $product-margin-top: $header-hight - ($firma-hight + 2 * $product-hight)
 
 
+#heading
+  margin: 0 auto
+  max-width: $heading-width /* 32em */
+  padding: 5px 10px 5px 10px
 
 
 #product
@@ -22,8 +42,63 @@ $product-margin-top: $header-hight - ($firma-hight + 2 * $product-hight)
   visibility: collapse
   margin: 0
 
-#main
-  max-width: 33.2em /* -> all */
+
 
 article > header
   margin-bottom: $section-margin-bottem
+
+
+.left-column
+  float: left
+  width: $left-column-width
+//  background: #9c9
+
+.right-column
+  float: right
+  width: $right-column-width
+
+//  background: #c9c
+
+.clearit
+  clear: both
+  font-size: 0px
+
+section
+  pre
+    padding: 5px
+
+
+#sec-navigation
+  position: fixed
+  top: 10em
+  left: 10px
+  z-index: -10
+  margin: 0px
+
+#section-navigation ul
+  list-style: none
+  margin: 5px
+  padding: 5px
+  width: 15em
+
+
+#section-context
+  position: fixed
+  top: 13.5em
+  width: 25em
+  right: 10px
+  p
+    padding: $section-padding
+    margin: $section-margin
+  h2
+    margin: $section-margin
+    padding-left: $section-padding
+
+
+  header
+    //padding: $section-padding
+    h1
+      margin: $section-margin
+      padding-left: $section-padding
+
+

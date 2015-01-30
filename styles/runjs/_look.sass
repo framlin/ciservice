@@ -1,11 +1,19 @@
 @import "../all/look"
 
-$ci-background : #fff60a
-$text-color: lighten($ci-background, 35)
-$hi-text-color: lighten($ci-background, 40)
+//$ci-background : #fff60a
+//$text-color: lighten($ci-background, 35)
+//$hi-text-color: lighten($ci-background, 40)
+$dark-text-color: lighten($ci-background, 20)
+$right-column-color: $dark-text-color
 
 html
   background-color: $ci-background
+
+#slogan #product
+  font-size: x-large
+
+#slogan #firma
+  font-size: smaller
 
 #navigation
   border: 0
@@ -22,6 +30,71 @@ article
 section
   header
     background-color: $hi-text-color
-
     h1
       background-color: $hi-text-color
+
+
+.content article.right-column
+  section
+    background-color: $dark-text-color
+
+.content > article > header
+  text-align: center
+  background-color: $dark-text-color
+
+.banner
+  width: 100%
+  background-color: $dark-text-color
+  text-align: center
+  font-family: TeX_Mono, monospace
+
+section
+  pre
+    background-color: $dark-text-color
+    font-family: TeX_Mono, monospace
+    font-size: small
+    margin: 5px
+
+
+.content article
+  .master-section
+    background-color: $hi-text-color
+    header
+      h1
+        color: $ci-schmuckfarbe
+
+section
+  .section-context
+    display: none
+
+#sec-navigation
+  background-color: $dark-text-color
+  border-top-style: solid
+  border-top-width: 1em
+  border-top-color: $section-border-color
+
+
+#section-context
+  font-size: small
+  background-color: $dark-text-color
+  header
+    border-color: $header-border-color
+    border-style: solid
+    border-width: 0 0 $header-border-width 0
+
+    h1
+      font-size: small
+      font-family: TeX_Mono, monospace
+      color: $ci-schmuckfarbe
+  h2
+    font-size: small
+    font-family: TeX_Mono, monospace
+    color: $ci-text
+
+#section-navigation
+  .visible-section
+    background-color: $hi-text-color
+
+  .master-section
+    color: $ci-schmuckfarbe
+    background-color: $hi-text-color
