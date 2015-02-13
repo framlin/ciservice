@@ -1,10 +1,8 @@
 var restify         = require('restify'),
     ServerPort      = require('fr-infra').ServerConfig.ciservice.port,
+    fontCache       = require('./font').loadAll();
 
-    partialCache    = require('./partial').loadAll(),
-    imageCache      = require('./image').loadAll(),
-    fontCache       = require('./font').loadAll(),
-    styleCache      = require('./style').loadAll();
+var fs = require('fs');
 
 function serveData(req, res, cache, mimeType, isText) {
     var path = req.params.path,
@@ -32,15 +30,15 @@ function serveData(req, res, cache, mimeType, isText) {
 }
 
 function ciPartial(req, res, next) {
-    serveData(req, res, partialCache, 'text/html', true);
+    fs.createReadStream(__dirname + '/../partials/'+req.params.path+'.html').pipe(res);
 }
 
 function ciStyle(req, res, next) {
-    serveData(req, res, styleCache, 'text/css', true);
+    fs.createReadStream(__dirname + '/../styles/'+req.params.site+'/'+req.params.path+'.css').pipe(res);
 }
 
 function ciImage(req, res, next) {
-    serveData(req, res, imageCache, 'image/png');
+    fs.createReadStream(__dirname + '/../images/'+req.params.path+'.png').pipe(res);
 }
 
 function ciFont(req, res, next) {

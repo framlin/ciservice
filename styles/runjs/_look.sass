@@ -32,7 +32,17 @@ section
     background-color: $hi-text-color
     h1
       background-color: $hi-text-color
+      padding-left: 2em
+  pre
+    background-color: $dark-text-color
+    font-family: TeX_Mono, monospace
+    font-size: small
+    padding: 5px
+  .extended
+    display: none
 
+section:hover
+  cursor: pointer
 
 .content article.right-column
   section
@@ -48,13 +58,6 @@ section
   text-align: center
   font-family: TeX_Mono, monospace
 
-section
-  pre
-    background-color: $dark-text-color
-    font-family: TeX_Mono, monospace
-    font-size: small
-    margin: 5px
-
 
 .content article
   .master-section
@@ -62,10 +65,6 @@ section
     header
       h1
         color: $ci-schmuckfarbe
-
-section
-  .section-context
-    display: none
 
 #sec-navigation
   background-color: $dark-text-color
@@ -75,6 +74,7 @@ section
 
 
 #section-context
+  display: none
   font-size: small
   background-color: $dark-text-color
   header
@@ -91,6 +91,10 @@ section
     font-family: TeX_Mono, monospace
     color: $ci-text
 
+#section-context.extended
+  display: block
+
+
 #section-navigation
   .visible-section
     background-color: $hi-text-color
@@ -98,3 +102,16 @@ section
   .master-section
     color: $ci-schmuckfarbe
     background-color: $hi-text-color
+
+  li:hover
+    cursor: pointer
+
+#cc3000-connection-pinout
+  font-family: TeX_Mono, monospace
+  td:first-child
+    width: 10em
+  tr:nth-child(even)
+    background-color: $dark-text-color
+  th
+    border-bottom-style: solid
+    border-bottom-width: 2px

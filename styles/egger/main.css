@@ -167,6 +167,8 @@ section {
     padding: 5px; }
   section p, section h1, section h2 {
     margin: 0.25em 0px; }
+  section h2 {
+    padding: 5px; }
   section footer .msg {
     float: left;
     width: 75%; }
@@ -324,7 +326,6 @@ section {
     section footer nav {
       text-align: right; }
   section h2 {
-    padding: 5px;
     font-size: 1.2em; }
 
 section header a, section header a:visited {
