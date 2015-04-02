@@ -171,6 +171,15 @@ section {
   z-index: 2;
   position: relative; }
 
+.content > article > header {
+  z-index: 2;
+  position: relative; }
+
+img.big {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 @font-face {
   font-family: TeX;
   src: url("/ci/font/TeX");
