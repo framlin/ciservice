@@ -49,8 +49,8 @@ function ciFont(req, res, next) {
 // ----------- run ----------------------------
 var server = restify.createServer();
 
-server.use(restify.CORS( {credentials: true, headers: ['x-framlin-ci']}));
-server.use(restify.fullResponse());
+// server.use(restify.CORS( {credentials: true, headers: ['x-framlin-ci']}));
+// server.use(restify.fullResponse());
 
 server.get('/ci/:site/partial/:path', ciPartial);
 server.get('/ci/:site/style/:path', ciStyle);
