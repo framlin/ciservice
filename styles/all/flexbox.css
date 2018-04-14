@@ -1,5 +1,10 @@
-.hbox, .vbox, .window, .flex, article {
+.hbox, .vbox, .window, .flex, article, nav, header {
     display: flex;
+}
+
+.page, article, nav, header {
+    align-items: center;
+    justify-content: center;
 }
 
 .hbox {
@@ -54,4 +59,9 @@ article,
 
 .flex-start {
     align-items: flex-start;
+}
+
+.fill-horizontal {
+    align-items: stretch;
+    align-content: stretch;
 }

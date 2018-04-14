@@ -1,0 +1,118 @@
+#main {
+    margin: 0 auto;
+    max-width: var(--content-width);
+    padding: 0;
+}
+
+#topnav {
+    margin: 1em 0em;
+    background-color: #ffe;
+    color: black;
+    font-size: 0.75em;
+}
+
+.navrow {
+    justify-content: space-between;
+    margin: 0.2em 0;
+}
+
+.navcol-1 {
+    width: 9em;
+
+    color: rgba(68, 5, 68, 0.98);
+    font-family: TeXMono_Bold, monospace;
+    font-size: 1em;
+}
+
+.navcol-2 {
+    justify-content: space-around;
+
+    font-family: TeXMono_Bold, monospace;
+    text-align: center;
+}
+
+.navcol-2 div {
+    padding: 0.2em 0;
+}
+
+/*=== NAV ===*/
+#navigation {
+    border-bottom-color: #ffa;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+
+    margin-top: 5px;
+    width: 100%;
+}
+
+
+/*============ CONTENT ==================*/
+#breadcrumb {
+    background-color: #ffffde;
+    font-size: small;
+}
+
+#breadcrumb a, #breadcrumb a:visited {
+    color: #521700;
+    font-size: small;
+}
+
+#breadcrumb ul {
+    padding: 0px 0px 5px 5px;
+}
+
+#breadcrumb li {
+    display: inline;
+    margin-left: 0.5em;
+}
+
+/* -------------customer-nav --------------------------------------*/
+#bottomnav {
+    background-color: #ffffde;
+    width: 100%;
+
+}
+#bottomnav table {
+    background-color: #ffffde;
+    width: 100%;
+
+}
+#bottomnav nav {
+    background-color: #ffffde;
+    color: black;
+}
+#bottomnav nav a {
+    color: #521700;
+    margin: 0;
+}
+
+#bottomnav table, td, th {
+    border-style: none;
+    text-align: left;
+    font-size: small;
+}
+
+#bottomnav td, th {
+    padding: 2px 10px 2px 5px;
+}
+
+/* -------------meta-nav --------------------------------------*/
+#metanav, #metanav nav {
+    background-color: #ffee37;
+}
+
+#metanav nav a, #metanav nav a:visited {
+    background-color: #ffee37;
+    color: #521700;
+    font-size: small;
+}
+
+#metanav ul {
+    padding: 0px 0px 5px 5px;
+}
+
+#metanav li {
+    display: inline;
+    margin-left: 1em;
+}
+

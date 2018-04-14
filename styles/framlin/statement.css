@@ -1,0 +1,105 @@
+.content article section {
+    background-color: #fffdea;
+}
+
+.content > article > header {
+    text-align: center;
+    background-color: #ffee37;
+}
+
+article header {
+    background-color: white;
+    font-family: TeX_Mono, monospace;
+}
+
+section {
+    /*border-bottom-color: #ff8352;*/
+    /*border-bottom-style: solid;*/
+    /*border-bottom-width: 4px;*/
+    font-family: TeX, serif;
+}
+section header {
+    border-color: #ff5e1f;
+    border-style: solid;
+    border-width: 2px 0 2px 0;
+    background-color: white;
+    font-size: 0.8em;
+}
+section header h1 {
+    background-color: white;
+    font-size: 1.3em;
+}
+section a {
+    color: #521700;
+}
+section footer {
+    background-color: #ffa;
+    font-size: 0.7em;
+    font-family: TeXMono;
+}
+section footer nav {
+    text-align: right;
+}
+section h2 {
+    font-size: 1.2em;
+}
+
+section header a, section header a:visited {
+    color: #521700;
+}
+
+section.no-boddy {
+    border-bottom: 0;
+}
+
+
+
+
+.content > article > header {
+    text-align: center;
+    padding: 5px;
+}
+.content > article > header p, .content > article > header h1, .content > article > header h2 {
+    margin: 0.25em 0px;
+}
+
+article section header {
+    display: block;
+    border-top-left-radius: var(--section-radius);
+    border-top-right-radius: var(--section-radius);
+}
+
+section {
+    margin-bottom: 1em;
+    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
+    border-radius: var(--section-radius);
+
+}
+
+section footer {
+    border-radius: var(--section-radius);
+}
+
+section header, section p, section footer {
+    padding: 5px;
+}
+section p, section h1, section h2 {
+    margin: 0.25em 0px;
+}
+section h2 {
+    padding: 5px;
+}
+section footer .msg {
+    float: left;
+    width: 75%;
+}
+section footer nav {
+    width: 25%;
+    margin-left: 75%;
+}
+section footer a {
+    width: 100%;
+}
+section audio {
+    width: 100%;
+}
