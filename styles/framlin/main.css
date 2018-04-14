@@ -18,6 +18,7 @@
 
 .navcol-1 {
     width: 9em;
+    padding-left: 0.5em;
 
     color: rgba(68, 5, 68, 0.98);
     font-family: TeXMono_Bold, monospace;
