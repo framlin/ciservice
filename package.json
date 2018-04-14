@@ -2,10 +2,6 @@
   "name": "ciservice",
   "version": "0.0.1",
   "dependencies": {
-    "restify": "^6.3.4"
-  },
-  "scripts": {
-    "postinstall": "npm link fr-builder fr-infra fr-routing fr-server",
-    "postupdate": "npm link fr-builder fr-infra fr-routing fr-server"
+    "http-server": "^0.11.1"
   }
 }

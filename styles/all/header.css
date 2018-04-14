@@ -1,0 +1,33 @@
+#heading {
+    background-color: var(--heading-bg-color);
+    margin: 0.4em 0 auto;
+    padding: 5px 10px 5px 10px;
+}
+
+#slogan {
+    margin-left: 10px;
+}
+
+#slogan div {
+    font-size: 1em;
+    font-family: telegrame, monospace;
+    text-align: center;
+    margin: 0.15em 0.2em;
+}
+
+#slogan #firma {
+    font-size: 1.1em;
+}
+
+#slogan #contact {
+    font-size: xx-small;
+}
+
+#contact {
+    margin-top: 1em;
+}
+
+#firma {
+    margin-bottom: 0.2em;
+}
+
