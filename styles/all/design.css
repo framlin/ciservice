@@ -2,7 +2,9 @@
 @import 'fonts.css';
 
 :root {
-    --section-radius: 5px;
+
+    --box-radius: 3px;
+    --section-radius: var(--box-radius);
 
     --std-bg-color:         var(--color-light-orange);
     --hilight-bg-color:     var(--color-dark-yellow);
@@ -10,6 +12,7 @@
     --heading-bg-color:     var(--color-light-yellow);
     --section-shadow-color: var(--color-dark-orange);
 
+    --box-shadow: 2px 2px 0px 0px var(--color-darker-orange);
 }
 
 

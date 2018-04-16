@@ -69,7 +69,7 @@ article section header {
 
 section {
     margin-bottom: 1em;
-    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
+    box-shadow: var(--box-shadow);
     border-radius: var(--section-radius);
 
 }

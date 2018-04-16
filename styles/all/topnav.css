@@ -2,9 +2,9 @@
     background-color: #ffe;
     color: black;
     font-size: 0.75em;
-    border-bottom-right-radius: var(--section-radius);
-    border-bottom-left-radius: var(--section-radius);
-    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
+    border-bottom-right-radius: var(--box-radius);
+    border-bottom-left-radius: var(--box-radius);
+    box-shadow: var(--box-shadow);
 
     display: flex;
     margin-top: 0.2em;

@@ -1,8 +1,9 @@
 #breadcrumb {
     background-color: var(--hilight-bg-color);
-    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
-    border-radius: var(--section-radius);
-
+    box-shadow: var(--box-shadow);
+    border-radius: var(--box-radius);
+    font-family: TeXMono;
+    font-weight: bold;
     font-size: small;
 }
 
@@ -12,7 +13,7 @@
 }
 
 #breadcrumb ul {
-    padding: 0px 0px 5px 5px;
+    padding: 5px 0px 5px 5px;
 }
 
 #breadcrumb li {

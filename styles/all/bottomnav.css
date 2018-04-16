@@ -2,16 +2,26 @@
     background-color: #ffffde;
     width: 100%;
 
+    box-shadow: var(--box-shadow);
+    border-top-right-radius: var(--box-radius);
+    border-top-left-radius: var(--box-radius);
 }
+
 #bottomnav table {
     background-color: #ffffde;
     width: 100%;
 
+    border-top-right-radius: var(--box-radius);
+    border-top-left-radius: var(--box-radius);
 }
+
 #bottomnav nav {
     background-color: #ffffde;
     color: black;
+    border-top-right-radius: var(--box-radius);
+    border-top-left-radius: var(--box-radius);
 }
+
 #bottomnav nav a {
     color: #521700;
     margin: 0;
