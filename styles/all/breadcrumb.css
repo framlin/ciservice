@@ -1,0 +1,21 @@
+#breadcrumb {
+    background-color: var(--hilight-bg-color);
+    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
+    border-radius: var(--section-radius);
+
+    font-size: small;
+}
+
+#breadcrumb a, #breadcrumb a:visited {
+    color: #521700;
+    font-size: small;
+}
+
+#breadcrumb ul {
+    padding: 0px 0px 5px 5px;
+}
+
+#breadcrumb li {
+    display: inline;
+    margin-left: 0.5em;
+}

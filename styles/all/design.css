@@ -1,0 +1,29 @@
+@import 'colors.css';
+@import 'fonts.css';
+
+:root {
+    --section-radius: 5px;
+
+    --std-bg-color:         var(--color-light-orange);
+    --hilight-bg-color:     var(--color-dark-yellow);
+
+    --heading-bg-color:     var(--color-light-yellow);
+    --section-shadow-color: var(--color-dark-orange);
+
+}
+
+
+
+html {
+    overflow: scroll;
+    background-color: var(--std-bg-color);
+}
+
+body {
+    font-family: TeXSans;
+}
+
+ul {
+    list-style-image: url("../../images/bullet.png");
+}
+

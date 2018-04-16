@@ -1,0 +1,80 @@
+#topnav {
+    background-color: #ffe;
+    color: black;
+    font-size: 0.75em;
+    border-bottom-right-radius: var(--section-radius);
+    border-bottom-left-radius: var(--section-radius);
+    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
+
+    display: flex;
+    margin-top: 0.2em;
+}
+
+#navigation {
+    width: 100%;
+}
+
+.navrow {
+    justify-content: space-between;
+    margin: 0.2em 0;
+}
+
+.navcol-1 {
+    width: 9em;
+    padding-left: 0.5em;
+
+    color: rgba(68, 5, 68, 0.98);
+    font-family: TeXMono_Bold, monospace;
+    font-size: 1em;
+}
+
+.navcol-2 {
+    justify-content: space-around;
+
+    font-family: TeXMono_Bold, monospace;
+    text-align: center;
+}
+
+.navcol-2 div {
+    padding: 0.2em 0;
+}
+
+.dark {
+    background-color: rgba(149, 92, 0, 0.47);
+    color: #fff2d0;
+}
+
+a.dark {
+    color: #fff2d0;
+    font-weight: bold;
+}
+
+.shaddow {
+    color: #ffffff;
+    background-color: rgba(188, 122, 0, 0.47);
+}
+
+a.shaddow {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.light {
+    background-color: rgba(255, 204, 153, 0.49);
+    color: darkred;
+}
+
+a.light {
+    font-weight: bold;
+    color: darkred;
+}
+
+.bright {
+    background-color: rgba(255, 239, 191, 0.47);
+    color: darkred;
+}
+
+a.bright {
+    font-weight: bold;
+    color: darkred;
+}

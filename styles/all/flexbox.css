@@ -1,4 +1,4 @@
-.hbox, .vbox, .window, .flex, article, nav, header {
+.hbox, .vbox, .window, .flex, article, header {
     display: flex;
 }
 

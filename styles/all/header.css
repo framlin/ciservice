@@ -1,7 +1,11 @@
 #heading {
-    background-color: var(--heading-bg-color);
+    background-color: var(--hilight-bg-color);
     margin: 0.4em 0 auto;
     padding: 5px 10px 5px 10px;
+    border-top-right-radius: var(--section-radius);
+    border-top-left-radius: var(--section-radius);
+
+    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
 }
 
 #slogan {

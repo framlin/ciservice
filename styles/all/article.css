@@ -1,8 +1,11 @@
-.content article section {
+@import "design.css";
+
+article section {
     background-color: #fffdea;
+    font-family: TeX, serif;
 }
 
-.content > article > header {
+article > header {
     text-align: center;
     background-color: #ffee37;
 }
@@ -12,12 +15,6 @@ article header {
     font-family: TeX_Mono, monospace;
 }
 
-section {
-    /*border-bottom-color: #ff8352;*/
-    /*border-bottom-style: solid;*/
-    /*border-bottom-width: 4px;*/
-    font-family: TeX, serif;
-}
 section header {
     border-color: #ff5e1f;
     border-style: solid;
@@ -25,6 +22,7 @@ section header {
     background-color: white;
     font-size: 0.8em;
 }
+
 section header h1 {
     background-color: white;
     font-size: 1.3em;
@@ -55,11 +53,11 @@ section.no-boddy {
 
 
 
-.content > article > header {
+article > header {
     text-align: center;
     padding: 5px;
 }
-.content > article > header p, .content > article > header h1, .content > article > header h2 {
+article > header p, .content > article > header h1, .content > article > header h2 {
     margin: 0.25em 0px;
 }
 

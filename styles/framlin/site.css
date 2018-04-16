@@ -1,8 +1,5 @@
 @import '../all/ci.css';
 
-@import 'layout.css';
-@import 'design.css';
-@import 'main.css';
-@import 'statement.css';
+@import '../all/article.css';
 @import 'projects.css';
 

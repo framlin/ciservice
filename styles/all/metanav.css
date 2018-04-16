@@ -1,0 +1,18 @@
+#metanav, #metanav nav {
+    background-color: var(--hilight-bg-color);
+}
+
+#metanav nav a, #metanav nav a:visited {
+    background-color: #ffee37;
+    color: #521700;
+    font-size: small;
+}
+
+#metanav ul {
+    padding: 0px 0px 5px 5px;
+}
+
+#metanav li {
+    display: inline;
+    margin-left: 1em;
+}
