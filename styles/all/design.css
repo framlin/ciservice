@@ -13,6 +13,8 @@
     --section-shadow-color: var(--color-dark-orange);
 
     --box-shadow: 2px 2px 0px 0px var(--color-darker-orange);
+
+    --article-bg-color:     var(--color-beige);
 }
 
 

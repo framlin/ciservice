@@ -1,4 +1,6 @@
 #heading {
+    justify-content: left;
+
     background-color: var(--hilight-bg-color);
     margin: 0.4em 0 auto;
     padding: 5px 10px 5px 10px;
@@ -9,6 +11,7 @@
 }
 
 #slogan {
+    justify-content: center;
     margin-left: 10px;
 }
 

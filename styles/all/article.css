@@ -1,7 +1,7 @@
 @import "design.css";
 
 article section {
-    background-color: #fffdea;
+    background-color: var(--article-bg-color);
     font-family: TeX, serif;
 }
 
