@@ -78,6 +78,7 @@ section {
     margin-bottom: 1em;
     box-shadow: var(--box-shadow);
     border-radius: var(--section-radius);
+    width:100%;
 }
 
 section footer {
@@ -87,10 +88,10 @@ section footer {
 section header, section p, section footer {
     padding: 5px;
 }
-section p, section h1, section h2 {
+section p, section h1, section h2, section h3{
     margin: 0.25em 0px;
 }
-section h2 {
+section h2, section h3 {
     padding: 5px;
 }
 section footer .msg {
@@ -106,4 +107,9 @@ section footer a {
 }
 section audio {
     width: 100%;
+}
+
+section ul {
+    margin: 0.25em;
+    padding: 0 0 0 1em;
 }
