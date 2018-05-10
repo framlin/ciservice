@@ -52,7 +52,6 @@ section.no-boddy {
 
 
 
-
 article > header {
     text-align: center;
     padding: 5px;
@@ -67,11 +66,18 @@ article section header {
     border-top-right-radius: var(--section-radius);
 }
 
+section.topic header,
+section.topic header h1
+{
+    background-color: var(--hilight-bg-color);
+    border-top-left-radius: var(--section-radius);
+    border-top-right-radius: var(--section-radius);
+}
+
 section {
     margin-bottom: 1em;
     box-shadow: var(--box-shadow);
     border-radius: var(--section-radius);
-
 }
 
 section footer {
